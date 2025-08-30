@@ -1,0 +1,17 @@
+Assunto: 
+Atualização do Status da Sprint
+
+Corpo do email:
+Boa tarde, time,
+A sprint 14 está dentro do cronograma. Já concluímos 80% das tarefas previstas e o backlog está atualizado no Jira.
+
+Pendências principais:
+Ajustar integração com API externa
+Revisar testes automatizados
+
+Se alguém encontrar bloqueios, por favor sinalize até amanhã cedo para podermos atuar rapidamente.
+Obrigado pelo empenho!
+
+Abs,
+Lucas Ferreira
+Scrum Master

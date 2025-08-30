@@ -1,0 +1,20 @@
+Assunto:  
+Atualização do Projeto – Entrega da Primeira Etapa 
+
+Corpo do email: 
+Olá, equipe. Gostaria de informar que finalizamos a primeira etapa do projeto Sistema de Relatórios  
+Inteligentes. O módulo de importação de dados já está implementado e em fase de testes. 
+
+Próximos passos: 
+Revisão do código até sexta-feira (29/08). 
+Ajustes de performance e segurança. 
+Preparação para a integração com o painel de visualização. 
+
+Peço que todos validem suas tarefas no Trello até amanhã para garantirmos o alinhamento.   
+Qualquer impedimento, me avisem o quanto antes para que possamos resolver em conjunto. 
+
+Obrigado pelo empenho de todos! 
+
+Atenciosamente, 
+Mariana Souza 
+Gerente de Projetos 
