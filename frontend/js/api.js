@@ -1,4 +1,5 @@
 import generateCardsAfterEmailConclusion from "./generateCardsAfterEmailConclusion.js";
+import { API_URL } from "./config.js";
 
 async function apiPostJson(email) {
   const response = await fetch(`${API_URL}/api/analyze-json`, {
