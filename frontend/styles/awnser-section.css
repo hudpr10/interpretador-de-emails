@@ -6,6 +6,8 @@
 }
 
 .card {
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
@@ -32,6 +34,12 @@
 .card h3 {
   font-size: 1.25rem;
   margin-bottom: 4px;
+}
+
+.card img {
+  position: absolute;
+  right: 16px;
+  top: 16px;
 }
 
 .back-button {
