@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IAterpretadora de E-mail</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/email.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>IAterpretadora de E-mail</h1>
+      <p>
+        Caixa cheia de mensagens, sem tempo para responder?<br />
+        Mande para mim e cuidarei daqueles que forem importantes!
+      </p>
+    </header>
+
+    <main>
+      <section class="anwser-container invisible">
+        <div class="card">
+          <h3>Classificação</h3>
+          <p class="classification-text"></p>
+        </div>
+
+        <div class="card">
+          <h3>Explicação</h3>
+          <p class="explanation-text"></p>
+        </div>
+
+        <div class="card">
+          <h3>Sugestão de Resposta</h3>
+          <p class="reply-text"></p>
+        </div>
+
+        <div>
+          <button onclick="window.location.reload()" class="back-button">
+            Voltar
+          </button>
+        </div>
+      </section>
+
+      <section class="loading-container invisible">
+        <img src="./assets/video/loading.gif" alt="Carregando..." />
+      </section>
+
+      <section class="form-container">
+        <div>
+          <div class="input-styled">
+            <textarea
+              oninput="autoGrow(this)"
+              id="text-input"
+              placeholder="Digite o conteúdo do e-mail..."
+            ></textarea>
+            <button id="input-button">
+              <img src="./assets/icons/paper-airplane.svg" alt="enviar" />
+              </svg>
+            </button>
+          </div>
+          <label class="error invisible" id="text-error-label"
+            >*Mínimo de 10 caracteres</label
+          >
+        </div>
+
+        <div class="file-container">
+          <label for="file-input" class="file-styled">
+            <input type="file" id="file-input" />
+            <img
+              id="archive-img"
+              src="./assets/icons/document-arrow-up.svg"
+              alt="ícone de upload de arquivos"
+            />
+            <span id="archive-label">Adicionar Arquivo</span>
+          </label>
+          <label for="file-input" class="file-label"
+            >*Arquivos permitidos .pdf e .txt</label
+          >
+          <label class="error invisible" id="file-error-label"
+            >*Não é permitido arquivos do tipo
+          </label>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="js/main.js"></script>
+    <script src="js/autoGrow.js"></script>
+  </body>
+</html>
