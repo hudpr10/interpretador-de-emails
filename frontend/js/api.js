@@ -2,11 +2,14 @@ import generateCardsAfterEmailConclusion from "./generateCardsAfterEmailConclusi
 import { API_URL } from "./config.js";
 
 async function apiPostJson(email) {
-  const response = await fetch(`${API_URL}/api/analyze-json`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email: email }),
-  });
+  const response = await fetch(
+    `https://interpretador-de-emails.onrender.com/api/analyze-json`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email }),
+    }
+  );
 
   const json = await response.json();
 
@@ -21,10 +24,13 @@ async function apiPostFile(emailFile) {
   const formData = new FormData();
   formData.append("emailFile", emailFile);
 
-  const response = await fetch(`${API_URL}/api/analyze-file`, {
-    method: "POST",
-    body: formData,
-  });
+  const response = await fetch(
+    `https://interpretador-de-emails.onrender.com/api/analyze-file`,
+    {
+      method: "POST",
+      body: formData,
+    }
+  );
 
   const json = await response.json();
 
