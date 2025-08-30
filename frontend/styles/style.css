@@ -2,6 +2,15 @@
 @import url("./header-section.css");
 @import url("./awnser-section.css");
 @import url("./form-section.css");
+@import url("./notification.css");
+
+:root {
+  --dark-blue: #0e192c;
+  --blue: #3d80e4;
+  --black: #272727;
+  --white: #f4f4f4;
+  --error: #e43636;
+}
 
 * {
   margin: 0;
@@ -12,8 +21,8 @@
 }
 
 body {
-  color: #0e192c;
-  background-color: #f4f4f4;
+  color: var(--dark-blue);
+  background-color: var(--white);
 
   display: flex;
   flex-direction: column;
@@ -35,5 +44,5 @@ main {
 .error {
   margin-left: 8px;
   font-size: 0.875rem;
-  color: #e43636;
+  color: var(--error);
 }
