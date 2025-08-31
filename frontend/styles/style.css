@@ -31,9 +31,14 @@ body {
 
 main {
   margin-top: 32px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .loading-container {
+  align-self: center;
   transition: 200ms;
 }
 

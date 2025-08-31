@@ -55,10 +55,16 @@ cd interpretador-de-emails
 pip install -r requirements.txt
 ```
 
-3. Configure as variáveis de ambiente criando um arquivo `.env` na raiz do projeto:
+3. Configure as variáveis de ambiente criando um arquivo `.env` na pasta **backend** do projeto:
 
-```bash
+```env
 GEMINI_API_KEY=sua_chave_aqui
+```
+
+4. Configure as rotas no arquivo `frontend/js/api.js`, caso utilize rotas locais é necessário colocar o endereço fornecido pelo Flask.
+
+```javascript
+const URL = "http://127.0.0.1:5000";
 ```
 
 ## ▶️ Como rodar

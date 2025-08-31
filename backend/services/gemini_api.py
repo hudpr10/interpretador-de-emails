@@ -21,11 +21,12 @@ def verify_email(email):
 
   response = client.models.generate_content(
     model="gemini-2.5-flash", 
-    contents="""Atue como meu assistente pessoal, quero que leia o conteudo do seguinte e-mail e
-    defina-o, de maneira objetiva, entre PRODUTIVO (precisam de uma resposta específica, solicitação 
-    de suporte técnico, atualização sobre casos em aberto, dúvidas sobre o sistema) ou IMPRODUTIVO 
-    (Não necessita de uma ação imediata, como mensagens de felicitação e agradecimento).
-    Email: """ + email,
+    contents="""Atue como meu assistente pessoal. Sua tarefa é classificar 
+      o seguinte e-mail em apenas uma das categorias abaixo:
+      PRODUTIVO: e-mails que exigem uma resposta ou ação, como solicitações de suporte, 
+      dúvidas sobre o sistema, atualizações de casos em aberto ou pedidos específicos.
+      IMPRODUTIVO: e-mails que não exigem ação imediata, como mensagens de agradecimento, 
+      felicitações, avisos gerais ou conteúdos irrelevantes.: """ + email,
     config={
         "response_mime_type": "application/json",
         "response_schema": Conclusion
@@ -39,8 +40,12 @@ def verify_email(email):
 def auto_response(email):
   response = client.models.generate_content(
     model="gemini-2.5-flash", 
-    contents="Com base nesse e-mail analisado anteriormente pelo atendente: " + email + "poderia atuar como " +
-    "assistente e escrever uma resposta clara para o remente, abordando os assuntos solicitados no email.",
+    contents="""Atue como meu assistente pessoal e elabore uma resposta profissional, 
+      educada e objetiva para esse email """ + email + """.
+      Aborde diretamente os pontos e solicitações feitas no e-mail.
+      Forneça informações claras e organizadas.
+      Mantenha um tom cortês e prestativo.
+      Responda apenas com o texto do e-mail de resposta.""",
     config={
         "response_mime_type": "application/json",
         "response_schema": str
